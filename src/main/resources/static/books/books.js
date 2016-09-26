@@ -12,7 +12,7 @@ angular.module('myApp.books', ['ngRoute', 'ngResource'])
     .service('BooksService', ['$resource',
         function ($resource) {
             return {
-                books: $resource("http://localhost:8080/api/books", {}, {
+                books: $resource(globalResource + "api/books", {}, {
                     get: {
                         method: 'GET',
                         cache: true
